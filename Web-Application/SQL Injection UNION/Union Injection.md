@@ -14,14 +14,10 @@ Test every input field with:
 Single quote. If page errors or behaves 
 differently = potentially vulnerable.
 
-### How to identify
-Test input fields with a universal polyglot payload:
-
 ```sql
-' " ) OR 1=1 -- -
+' OR " OR \" OR ' OR 1=1; --
 ```
 
-If the page throws an error, crashes, or behaves differently, it is potentially vulnerable.
 
 
 ### Types Practiced
