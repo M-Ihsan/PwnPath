@@ -15,8 +15,8 @@ by anyone in the world.
 ## Attacker Methodology
 Before attacking, always follow this order:
 
-1 - Recon — what pages exist, what inputs exist
-2 - Map all inputs — forms, URLs, headers, cookies
-3 - Test each input systematically
-4 - Document everything as you go
-5 - Write findings in report format
+ - Recon — what pages exist, what inputs exist
+ - Map all inputs — forms, URLs, headers, cookies
+ - Test each input systematically
+ - Document everything as you go
+ -  Write findings in report format
