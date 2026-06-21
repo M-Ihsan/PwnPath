@@ -9,7 +9,7 @@ query logic.
 ### How to identify
 Test every input field with:
 ```sql
-'
+' OR "
 ```
 Single quote. If page errors or behaves 
 differently = potentially vulnerable.
