@@ -1,6 +1,6 @@
 # Week 1 — Passive OSINT & Subdomain Enumeration
 
-**Internship:** Cyberster Red Teaming  
+**Internship:**
 **Target:** hackthissite.org (authorized scope)  
 **Type:** Passive Reconnaissance — zero direct interaction with target
 
