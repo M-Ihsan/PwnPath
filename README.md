@@ -15,6 +15,7 @@ documented here was executed in a real home lab.
 | [Web Application](./Web-Application/) | SQLi, XSS, Command Injection, Filter Bypass | ✅ |
 | [Cheatsheets](./Cheatsheets/) | Quick reference commands | 🔄 |
 | [Report Templates](./Report-Templates/) | Professional pentest report formats | 🔄 |
+| [Internship — Week 1](./Internship/) | Passive OSINT, subdomain enumeration, Google/GitHub dorking, visual recon | ✅ Done |
 
 ## Who This Is For
 - Beginners building their first home lab
